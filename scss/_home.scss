@@ -52,8 +52,7 @@
     h2 {
       margin-bottom: 6.7rem;
       text-align: center;
-      color: #ffffff;
-      opacity: 0.4;
+      color: rgba(255, 255, 255, 0.4);      
       font-weight: 600;
     }
     .image {
@@ -723,15 +722,18 @@
       position: absolute;
       &.mockup-01 {
         left:0;
-        bottom: 4.7rem;        
+        bottom: 4.7rem;   
+        z-index: 2;     
       }
       &.mockup-02 {
         top: 0.3rem;
         left: 25.8rem;
+        z-index: 2;
       }
       &.circle {
         right: 0;
         bottom: 0;
+        z-index: 0;
       }
     }
   }
