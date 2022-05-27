@@ -68,12 +68,14 @@
         left: 0;
         z-index: 2;
         max-width: 43.5rem;
+        animation: floating 6s infinite;
       }
       .card-back {
         bottom: 4.6rem;
         right: 8.6rem;
         z-index: 1;
         max-width: 35.2rem;
+        animation: floating 8s infinite;
       }
       .circle {
         top: 2.8rem;
@@ -664,7 +666,7 @@
     
 .s-conta-digital {
   padding-top: 12.7rem;
-  padding-bottom: 8.5rem;
+  padding-bottom: 8.5rem;  
   .container {
     display: flex;
     align-items: center;
@@ -840,4 +842,17 @@
     }
   }
 
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  } 
+  
 }
