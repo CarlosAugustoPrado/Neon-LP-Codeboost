@@ -30,6 +30,5 @@ function openMenuMobile() {
   document.documentElement.classList.toggle('menu-opened');
 }
 
-
 btnMenu.addEventListener('click', openMenuMobile);
 overlayMenu.addEventListener('click', openMenuMobile);
