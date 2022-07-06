@@ -6,6 +6,7 @@ header {
   height: 8.8rem;
   display: flex;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 2022;
   
   .container {
     @include flex (row, center, space-between);
@@ -13,6 +14,60 @@ header {
   nav {
     display: flex;
     align-items: center;
+    position: relative;
+    .dropdown {
+      position: absolute;
+      top: 49px;
+      left: -130px;
+      width: 100%;
+      max-width: 37.3rem;
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 4rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all .3s;
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
+      }
+      &:after {
+        content: "";
+        width: 29.3rem;
+        height: 0.5rem;
+        background: #FFC800;
+        border-radius: 12px 12px 0 0;
+        position: absolute;
+        bottom: 0;
+      }
+      .item {
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 2.8rem;          
+        }
+        &:hover {
+          strong {
+            color: $brand-blue;
+          }
+        }
+        strong {
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          color: #5F5C6B;
+          display: block;
+          margin-bottom: 0.4rem;
+        }
+        p {
+          font-size: 1.4rem;
+          line-height: 150%;
+          color: #8C8A97;
+        }
+      }
+      
+    }
     ul {
       display: flex;
       align-items: center;
